@@ -34,7 +34,7 @@ Du ska bygga är en portfoliosida [enligt denna Figma-skiss](https://www.figma.c
 ## Kriterier för bedömning 🏅
 
 
-*Icke Godkänd (IG), Godkänd (G)
+Icke Godkänd (IG), Godkänd (G)
 
 ### Godkänd (G)
 
