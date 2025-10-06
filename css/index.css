@@ -1,0 +1,237 @@
+/* Reset lists */
+.nav-list, .social-links {
+  list-style: none; /* remove bullets */
+  padding: 0; 
+  margin: 0;
+}
+
+/* Social icons default style */
+.social-links {
+  display: flex;
+  gap: 10rem;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0);   /* makes icons black */
+}
+
+/* ===== Mobile (default) ===== */
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;  /* stack menu items */
+  gap: 1rem;
+}
+.nav-list a {
+  text-decoration: none; /* removes underline */
+  color: black;          /* makes text black */
+  font-weight: 500;      /* optional, for better readability */
+}
+.nav-toggle {
+  position: absolute;   /* position relative to the page */
+  top: 1rem;            /* distance from top */
+  right: 1rem;          /* distance from right */
+  background: none;     /* remove default button style */
+  border: none;
+  font-size: 2rem;      /* make ☰ bigger */
+  cursor: pointer;
+}
+.social-links {
+  justify-content: center; /* center icons in a row under menu */
+}
+
+/* ===== Desktop (≥600px) ===== */
+@media (min-width: 600px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-list {
+    flex-direction: row;  /* horizontal menu */
+    gap: 2rem;
+  }
+
+  .social-links {
+    gap: 1.5rem;
+  }
+}
+
+
+
+.hero {
+  display: flex;
+  justify-content: left;  /* center block horizontally */
+  padding: 2rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;   /* stack text and image */
+  align-items: flex-start;  /* keep everything aligned left */
+  gap: 1.5rem;
+}
+
+.hero-title span {
+  display: block;
+  font-size: 1.2rem;
+}
+
+.highlight {
+  color: #3b82f6; /* example highlight color */
+  font-weight: bold;
+}
+
+.hero-image {
+  width: 180px;
+  height: auto;
+  border-radius: 50%;
+  padding: 3px; /* for ring effect */
+}
+
+/* Desktop layout: text + image side by side */
+@media (min-width: 600px) {
+  .hero-content {
+    flex-direction: row;        /* put text + image side by side */
+    align-items: center;        /* vertically center */
+    text-align: left;
+    gap: 3rem;                  /* space between text and image */
+  }
+
+}
+.hero-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: var(--color-secondary);
+}
+/* Default: show mobile content, hide desktop content */
+.mobile-text{
+  display: block;  /* show only on mobile */
+}
+.desktop-text {
+  display: none;   /* hide on desktop */
+}
+
+.experience-item, .education-item { 
+  display: flex;
+  justify-content: space-between; /* left and right */
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+.experience-left p {
+  margin: 0.25rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.experience-right {
+    flex-direction: column;
+    align-items: flex-end;
+}
+.experience-right {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.experience-item.mobile-only,
+.education-item.mobile-only{
+  display: flex;  /* show only on mobile */
+}
+.tech-icons.mobile-only {
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.mobile-only {
+  display: block;
+}
+.desktop-only {
+  display: none;
+}
+.experience-item.desktop-only,
+.education-item.desktop-only,
+.tech-icons.desktop-only {
+  display: none;
+}
+
+/* Desktop breakpoint */
+@media (min-width: 600px) {
+  .mobile-text {
+    display: none;   /* hide on desktop */
+  }
+  .mobile-only {
+    display: none;   /* hide on desktop */
+  }
+  .experience-left {
+    display: flex;
+    flex-direction: row;
+  }
+  .experience-right {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .experience-item.mobile-only,
+  .education-item.mobile-only,
+  .tech-icons.mobile-only {
+    display: none;   /* hide on desktop */
+  }
+  .desktop-text,
+  .desktop-only {
+    display: block;  /* show on desktop */
+  }
+  .experience-item.desktop-only,
+  .education-item.desktop-only {
+    display: flex;  /* show only on desktop */
+  }
+  .tech-icons.desktop-only {
+    display: grid; 
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .experience-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.experience-row p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.tech-icons img {
+  width: 40px;
+  height: 40px;
+}
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  margin-top: 2rem;
+}
+
