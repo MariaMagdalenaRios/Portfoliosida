@@ -1,0 +1,58 @@
+/* === MOBILE FIRST === */
+.tech-icons.mobile-only {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-items: center;
+}
+.mobile-only {
+  display: block; 
+}
+.desktop-only {
+  display: none; /* hide desktop content on mobile */
+}
+
+/* Section spacing on mobile */
+.tech-stack {
+  margin-bottom: rem;
+}
+
+/* === DESKTOP (≥600px) === */
+@media (min-width: 600px) {
+  .tech-icons.mobile-only { 
+    display: none;
+  }
+
+  /* Show desktop version */
+  .desktop-only {
+    display: block;
+  }
+
+  /* Grid for desktop icons (2 rows × 6 icons) */
+  .tech-icons.desktop-only {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .tech-icons.desktop-only img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.2s ease;
+  }
+
+  .tech-icons.desktop-only img:hover {
+    transform: scale(1.1);
+  }
+
+  /* Section spacing on desktop */
+  .tech-stack {
+    margin-bottom: 5rem;
+  }
+}
+
+

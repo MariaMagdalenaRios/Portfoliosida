@@ -1,0 +1,89 @@
+.nav-list {
+  display: none;
+}
+.social-links {
+  display: none;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* horizontally center */
+  text-align: center;
+  padding: 2rem 1rem;
+  gap: 1rem;                 /* space between elements */
+  min-height: 100vh;        /* optional: makes it full screen height */
+  background-color: #f9f9f9; /* optional: background */
+}
+
+.contact h2 {
+  font-size: 1.5rem;
+  color: var(--color-primary, #111); /* use your variable or fallback */
+}
+
+.contact .mail,
+.contact .number {
+  font-weight: bold;
+  color: var(--color-secondary, #333); /* fallback color */
+  font-size: 1.2rem;
+  word-break: break-word; /* prevent email/phone from overflowing */
+}
+
+.contact a {
+  text-decoration: none;
+  color: inherit; /* keeps link color same as text */
+}
+.mail,
+.number {
+  background: linear-gradient(90deg, #009dff, #ee09ee);  /* el degradado */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* fallback */
+  font-weight: bold;
+}
+/* === MOBILE FIRST === */
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
+}
+
+/* === DESKTOP (≥600px) === */
+@media (min-width: 600px) {
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: block;
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+  }
+
+  .nav-list, .social-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-list a {
+    text-decoration: none;
+    color: rgb(153, 150, 150);
+    font-weight: 500;
+  }
+
+  .social-links img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) saturate(0) invert(60%);
+  }
+}
