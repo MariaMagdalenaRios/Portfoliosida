@@ -1,97 +1,108 @@
-/* === Shared layout for experience and education === */
+.nav-list {
+  display: none;
+}
+.social-links {
+  display: none;
+}
+.experience {
+  margin-top: 2rem;
+}
+.about {
+  margin-top: 2rem;
+}
 .experience-item,
 .education-item {
   display: flex;
+  margin-top: 20rem;
   justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
 }
-
-.experience-left,
-.education-left {
-  flex: 1;
-}
-
 .experience-right,
 .education-right {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   text-align: right;
 }
 
-.experience-left p,
-.education-left p {
-  margin: 0.2rem 0;
+@media (min-width: 600px){
+
+  .desktop-only .experience-right,
+  .desktop-only .experience-right,
+  .desktop-only .education-right,
+  .desktop-only .education-right {
+    justify-self: end; /* place right column at the grid end */
+  }
 }
 
-/* === Mobile (default) === */
+.mobile-text {
+  display: block;
+  margin-top: 2rem;
+}
+
+.desktop-text {
+  display: none;
+}
+
 .mobile-only {
+  flex-direction: row;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid grey;
 }
 
 .desktop-only {
   display: none;
 }
 
-/* === Desktop (≥600px) === */
+/* === DESKTOP (≥600px) === */
 @media (min-width: 600px) {
-  .mobile-only {
+  .mobile-text {
     display: none;
   }
+  .mobile-only{
+    display: none;
+  }
+  .desktop-text {
+    display: block;
+    margin-bottom: 3rem;
+  }
+
+  
 
   .desktop-only {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid grey;
+  }
+
+  .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-  }
-}
-/* Default = Mobile */
-.mobile-text {
-  display: block;   /* show only on mobile */
-}
-
-.desktop-text {
-  display: none;    /* hide on mobile */
-}
-
-/* Desktop (≥600px) */
-@media (min-width: 600px) {
-  .mobile-text {
-    display: none;  /* hide on desktop */
+    padding: 1rem 4rem;
   }
 
-  .desktop-text {
-    display: block; /* show only on desktop */
-  }
-}
-
-/* Desktop: ensure company (left) and date (right) sit on the same row
-   Apply only to desktop-only variants so mobile UI is untouched. */
-@media (min-width: 600px) {
-  .experience-item.desktop-only,
-  .education-item.desktop-only {
-    display: grid;
-    grid-template-columns: 1fr auto; /* left expands, right hugs content */
-    align-items: center;              /* vertically align the row */
-    gap: 1rem;
+  .nav-list,
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
-  .experience-item.desktop-only .experience-left,
-  .education-item.desktop-only .experience-left,
-  .experience-item.desktop-only .education-left,
-  .education-item.desktop-only .education-left {
-    margin: 0; /* remove extra vertical margins that can push content */
+  .nav-list a {
+    text-decoration: none;
+    color: rgb(153, 150, 150);
+    font-weight: 500;
   }
 
-  .experience-item.desktop-only .experience-right,
-  .education-item.desktop-only .experience-right,
-  .experience-item.desktop-only .education-right,
-  .education-item.desktop-only .education-right {
-    justify-self: end; /* place right column at the grid end */
+  .social-links img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) saturate(0) invert(60%);
   }
 }

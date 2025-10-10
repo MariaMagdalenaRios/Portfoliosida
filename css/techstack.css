@@ -4,16 +4,13 @@
 .social-links {
   display: none;
 }
-/* === DESKTOP (≥600px) === */
 @media (min-width: 600px) {
- 
   .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 4rem;
   }
-
   .nav-list, .social-links {
     display: flex;
     align-items: center;
@@ -22,20 +19,23 @@
     margin: 0;
     padding: 0;
   }
-
   .nav-list a {
     text-decoration: none;
     color: rgb(153, 150, 150);
     font-weight: 500;
   }
-
   .social-links img {
     width: 30px;
     height: 30px;
     filter: brightness(0) saturate(0) invert(60%);
   }
 }
-/* === MOBILE FIRST === */
+.tech-stack {
+  padding-left: 0.5rem;
+  padding-right: 2rem;
+  min-height: 0vh;
+  
+}
 .tech-icons.mobile-only {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -43,23 +43,38 @@
   margin-top: 1rem;
   justify-items: center;
 }
+.tech-icons.mobile-only img{
+  width: 80px;
+  height: 80px;
+}
 .mobile-only {
-  display: block; 
+  display: block;
+  margin-top: 2rem; 
+}
+.mobile-text {
+  font-size: 14px;
 }
 .desktop-only {
   display: none; /* hide desktop content on mobile */
 }
+.desktop-text {
+  display: none;
+}
 
-/* === DESKTOP (≥600px) === */
 @media (min-width: 600px) {
   .mobile-only {
     display: none;
+  }
+  .mobile-text{display: none;
   }
   .tech-icons.mobile-only { 
     display: none;
   }
   .desktop-only {
     display: block;
+  }
+  .desktop-text {
+    font-size: 14px;
   }
 
   /* Grid for desktop icons (2 rows × 6 icons) */

@@ -1,14 +1,12 @@
-/* Reset lists */
+
+
 .nav-list, .social-links {
   list-style: none; /* remove bullets */
-  padding: 0; 
-  margin: 0;
 }
 
-/* Social icons default style */
 .social-links {
   display: flex;
-  gap: 10rem;
+  gap: 5rem;
 }
 
 .social-links img {
@@ -16,8 +14,6 @@
   height: 30px;
   filter: brightness(0);   /* makes icons black */
 }
-
-/* ===== Mobile (default) ===== */
 .nav {
   display: flex;
   flex-direction: column;
@@ -26,11 +22,13 @@
   gap: 2rem;
   padding: 1rem;
 }
-
+.nav-desktop{
+  display: none;
+}
 .nav-list {
   display: flex;
   flex-direction: column;  /* stack menu items */
-  gap: 1rem;
+  gap: 0rem;
 }
 .nav-list a {
   text-decoration: none; /* removes underline */
@@ -50,57 +48,63 @@
   justify-content: center; /* center icons in a row under menu */
 }
 
-/* ===== Desktop (≥600px) ===== */
+
 @media (min-width: 600px) {
   .nav {
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
   }
-
   .nav-list {
     flex-direction: row;  /* horizontal menu */
     gap: 2rem;
   }
-
   .social-links {
     gap: 1.5rem;
   }
 }
-
-
+.mobile-only {
+  display: inline;
+}
+.desktop-only {
+  display: none;
+}
+@media (min-width: 600px) {
+  .mobile-only {
+    display: none;
+  }
+  .desktop-only {
+    display: inline;
+  }
+}
 
 .hero {
   display: flex;
   justify-content: left;  /* center block horizontally */
   padding: 2rem;
 }
-
 .hero-content {
   display: flex;
   flex-direction: column;   /* stack text and image */
   align-items: flex-start;  /* keep everything aligned left */
   gap: 1.5rem;
 }
-
 .hero-title span {
   display: block;
   font-size: 1.2rem;
 }
-
 .highlight {
-  color: #3b82f6; /* example highlight color */
-  font-weight: bold;
+  background: linear-gradient(90deg, #08a7fc, #5f1895);
+  background-clip: text;
+  -webkit-background-clip: text;  /* for Safari */
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* fallback */
+  font-weight: 700;
 }
-
 .hero-image {
   width: 180px;
   height: auto;
   border-radius: 50%;
   padding: 3px; /* for ring effect */
 }
-
-/* Desktop layout: text + image side by side */
 @media (min-width: 600px) {
   .hero-content {
     flex-direction: row;        /* put text + image side by side */
@@ -114,12 +118,7 @@
   font-size: 1.2rem;
   margin-bottom: 0.3rem;
 }
-
-.highlight {
-  color: var(--color-primary);
-}
-
 .hero-subtitle {
   font-size: 1rem;
-  color: var(--color-secondary);
+
 }

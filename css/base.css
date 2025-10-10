@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 :root {
   --color-bg: #f9f9f9;
   --color-primary: #060606;
@@ -5,7 +7,7 @@
   --color-white: #ffffff;
   --color-black: #111827;
 
-  --font-main: "Inter", sans-serif;
+  --font-main: "Poppins", sans-serif;
 }
 
 * {
@@ -18,7 +20,9 @@
   height: 40px;
   width: auto;
 }
-
+.nav-list {
+  font-size: 14px;
+}
 .nav-toggle {
   position: absolute;   /* position relative to the page */
   top: 1rem;            /* distance from top */
@@ -38,6 +42,9 @@
 
 body {
   font-family: var(--font-main);
+  font-weight: 400;       /* regular */
+  font-size: 16px;
+  line-height: 1.5;
   background: var(--color-bg);
   color: var(--color-black);
   max-width: 600px;
@@ -47,7 +54,7 @@ body {
 @media (min-width: 600px) {
   body {
     max-width: 1280px; /* or 100%, if you want full width */
-    margin: 0 auto;    /* keep it centered but wider */
+    margin: 20 auto;    /* keep it centered but wider */
     padding: 2rem 4rem; /* add horizontal breathing room */
   }
 }
@@ -58,7 +65,7 @@ h1, h2 {
 }
 h1 {
   font-family: var(--font-main);
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
 
   /* Gradient color */
@@ -85,13 +92,11 @@ p {
   font-family: var(--font-main);
   font-weight: 700;
 }
-
-/* Site-wide footer layout: center footer content on every page that includes base.css */
 .footer {
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.6rem;
   color: var(--color-secondary);
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 
 /* Desktop-only: give the footer .name the same gradient treatment as .coffee */
@@ -105,5 +110,9 @@ p {
     display: inline-block;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
+  }
+  .footer {
+    display: block;
+    padding-top: 10rem;
   }
 }

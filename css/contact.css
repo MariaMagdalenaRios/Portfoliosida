@@ -11,12 +11,12 @@
   text-align: center;
   padding: 2rem 1rem;
   gap: 1rem;                 /* space between elements */
-  min-height: 100vh;        /* optional: makes it full screen height */
+  min-height: 70vh;        /* optional: makes it full screen height */
   background-color: #f9f9f9; /* optional: background */
 }
 
 .contact h2 {
-  font-size: 1.5rem;
+  font-size: 18px;
   color: var(--color-primary, #111); /* use your variable or fallback */
 }
 
@@ -44,6 +44,8 @@
 /* === MOBILE FIRST === */
 .mobile-only {
   display: block;
+  margin-top: 2rem;
+
 }
 
 .desktop-only {
