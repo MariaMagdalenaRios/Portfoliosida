@@ -1,5 +1,6 @@
-
-
+.desktop-only {
+display: none;
+}
 .nav-list, .social-links {
   list-style: none; /* remove bullets */
 }
@@ -14,26 +15,19 @@
   height: 30px;
   filter: brightness(0);   /* makes icons black */
 }
-.nav {
+.nav-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 2rem;
   padding: 1rem;
-}
-.nav-desktop{
-  display: none;
-}
-.nav-list {
-  display: flex;
-  flex-direction: column;  /* stack menu items */
   gap: 0rem;
 }
+
 .nav-list a {
   text-decoration: none; /* removes underline */
   color: black;          /* makes text black */
-  font-weight: 500;      /* optional, for better readability */
+  font-weight: 700;      /* optional, for better readability */
 }
 .nav-toggle {
   position: absolute;   /* position relative to the page */
@@ -50,29 +44,38 @@
 
 
 @media (min-width: 600px) {
-  .nav {
-    flex-direction: row;
-  }
-  .nav-list {
-    flex-direction: row;  /* horizontal menu */
-    gap: 2rem;
-  }
-  .social-links {
-    gap: 1.5rem;
-  }
+  .desktop-only {
+    display: flex;
 }
-.mobile-only {
-  display: inline;
-}
-.desktop-only {
-  display: none;
-}
-@media (min-width: 600px) {
-  .mobile-only {
+  .mobile-only{
     display: none;
   }
-  .desktop-only {
-    display: inline;
+  .nav {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+  }
+
+  .nav-list, .social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    list-style: none;
+    margin-left: 7rem;
+    padding: 0;
+  }
+
+  .nav-list a {
+    text-decoration: none;
+    color: rgb(153, 150, 150);
+    font-weight: 500;
+  }
+
+  .social-links img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) saturate(0) invert(60%);
   }
 }
 
@@ -86,6 +89,14 @@
   flex-direction: column;   /* stack text and image */
   align-items: flex-start;  /* keep everything aligned left */
   gap: 1.5rem;
+}
+.hero-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+.hero-subtitle {
+  font-size: 1rem;
+
 }
 .hero-title span {
   display: block;
@@ -110,15 +121,17 @@
     flex-direction: row;        /* put text + image side by side */
     align-items: center;        /* vertically center */
     text-align: left;
-    gap: 3rem;                  /* space between text and image */
+    gap: 20rem;                  /* space between text and image */
   }
+  .hero-title {
+  font-size: 50rem;
+ 
+}
+  .hero-image {
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  padding: 3px; /* for ring effect */
+}
+}
 
-}
-.hero-title {
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
-}
-.hero-subtitle {
-  font-size: 1rem;
-
-}
