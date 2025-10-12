@@ -2,11 +2,8 @@
 
 :root {
   --color-bg: #f9f9f9;
-  --color-primary: #060606;
-  --color-secondary: #000307;
+  --color-secondary: #656566;
   --color-white: #ffffff;
-  --color-black: #111827;
-
   --font-main: "Poppins", sans-serif;
 }
 
@@ -29,8 +26,8 @@
   right: 1rem;          /* distance from right */
   background: none;     /* remove default button style */
   border: none;
-  font-size: 2rem;      /* make ☰ bigger */
-  cursor: pointer; 
+  font-size: 1.5rem;      /* make ☰ bigger */
+  cursor: pointer;
 }
 
 
@@ -58,26 +55,18 @@ body {
     padding: 2rem 4rem; /* add horizontal breathing room */
   }
 }
-
-
-
-p {
-  color: var(--color-secondary);
-  line-height: 1.5;
-}
-
 /* Footer gradient styling (site-wide). Applies to .coffee span whether nested or sibling of .love */
 .footer .love,
 .footer .coffee {
   color: var(--color-primary); /* fallback for non-supporting browsers */
-  background: linear-gradient(90deg, #009dff, #ee09ee);
+  background: linear-gradient(90deg, #7700ff, #ee09ee);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent; /* ensure gradient fills the glyphs */
   display: inline-block;
   font-family: var(--font-main);
-  font-weight: 700;
+  font-weight: 500;
 }
 .footer {
   text-align: center;
@@ -89,14 +78,14 @@ p {
 /* Desktop-only: give the footer .name the same gradient treatment as .coffee */
 @media (min-width: 600px) {
   .footer .name {
-    background: linear-gradient(90deg, #009dff, #ee09ee);
+    background: linear-gradient(90deg, #7700ff, #ee09ee);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
     display: inline-block;
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
   }
   .footer {
     display: block;

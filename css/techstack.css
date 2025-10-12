@@ -53,6 +53,7 @@
 }
 .mobile-text {
   font-size: 14px;
+  color: #666565;
 }
 .desktop-only {
   display: none; /* hide desktop content on mobile */
@@ -65,7 +66,8 @@
   .mobile-only {
     display: none;
   }
-  .mobile-text{display: none;
+  .mobile-text{
+    display: none;
   }
   .tech-icons.mobile-only { 
     display: none;
@@ -77,6 +79,7 @@
   .desktop-text {
     display: block;
     font-size: 14px;
+    color: #666565;
   }
 
   /* Grid for desktop icons (2 rows × 6 icons) */
@@ -86,7 +89,7 @@
     gap: 2rem;
     justify-items: center;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 6rem;
   }
 
   .tech-icons.desktop-only img {

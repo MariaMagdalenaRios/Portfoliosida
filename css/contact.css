@@ -34,7 +34,7 @@
 }
 .mail,
 .number {
-  background: linear-gradient(90deg, #009dff, #ee09ee);  /* el degradado */
+  background: linear-gradient(90deg, #663ef8, #b304e9);  /* el degradado */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -44,8 +44,6 @@
 /* === MOBILE FIRST === */
 .mobile-only {
   display: block;
-  margin-top: 2rem;
-
 }
 
 .desktop-only {

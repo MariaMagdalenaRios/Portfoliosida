@@ -4,12 +4,12 @@ display: none;
 .nav-list, .social-links {
   list-style: none; /* remove bullets */
 }
-
 .social-links {
   display: flex;
   gap: 5rem;
+  justify-content: center; /* center icons in a row under menu */
+  margin-bottom: 2rem;
 }
-
 .social-links img {
   width: 30px;
   height: 30px;
@@ -21,27 +21,15 @@ display: none;
   align-items: center;
   text-align: center;
   padding: 1rem;
-  gap: 0rem;
 }
-
 .nav-list a {
   text-decoration: none; /* removes underline */
   color: black;          /* makes text black */
   font-weight: 700;      /* optional, for better readability */
 }
-.nav-toggle {
-  position: absolute;   /* position relative to the page */
-  top: 1rem;            /* distance from top */
-  right: 1rem;          /* distance from right */
-  background: none;     /* remove default button style */
-  border: none;
-  font-size: 2rem;      /* make ☰ bigger */
-  cursor: pointer;
+.footer {
+  display: none;
 }
-.social-links {
-  justify-content: center; /* center icons in a row under menu */
-}
-
 
 @media (min-width: 600px) {
   .desktop-only {
@@ -54,31 +42,30 @@ display: none;
     display: flex;
     flex-direction:row;
     justify-content: space-between;
-    padding: 1rem 4rem;
   }
-
   .nav-list, .social-links {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 3rem;
     list-style: none;
-    margin-left: 7rem;
-    padding: 0;
+    margin-left: 3rem;
+    padding: 0rem;  
   }
-
   .nav-list a {
     text-decoration: none;
     color: rgb(153, 150, 150);
     font-weight: 500;
+    padding: 0rem;
   }
-
   .social-links img {
     width: 30px;
     height: 30px;
     filter: brightness(0) saturate(0) invert(60%);
   }
+  .footer {
+  display: block;
 }
-
+}
 .hero {
   display: flex;
   justify-content: left;  /* center block horizontally */
@@ -91,19 +78,14 @@ display: none;
   gap: 1.5rem;
 }
 .hero-title {
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
-}
-.hero-subtitle {
-  font-size: 1rem;
-
+  font-size: 5rem;
 }
 .hero-title span {
   display: block;
   font-size: 1.2rem;
 }
 .highlight {
-  background: linear-gradient(90deg, #08a7fc, #5f1895);
+  background: linear-gradient(20deg, #08a7fc, #e904e9);
   background-clip: text;
   -webkit-background-clip: text;  /* for Safari */
   -webkit-text-fill-color: transparent;
@@ -117,15 +99,20 @@ display: none;
   padding: 3px; /* for ring effect */
 }
 @media (min-width: 600px) {
+  .hero {
+  display: flex;
+  justify-content: left;  /* center block horizontally */
+  padding: 5rem;
+}
   .hero-content {
     flex-direction: row;        /* put text + image side by side */
     align-items: center;        /* vertically center */
     text-align: left;
     gap: 20rem;                  /* space between text and image */
   }
-  .hero-title {
-  font-size: 50rem;
- 
+  .hero-title span {
+  display: block;
+  font-size: 2rem;
 }
   .hero-image {
   width: 250px;

@@ -54,7 +54,13 @@
   margin-bottom: 1.5rem;
   color: #000000;
 }
-
+.project-text {
+  font-size: 0.9rem;
+  color: #666565;
+}
+.subtitle {
+  display: none;
+}
 .project-item {
   background: #ffffff;
   border-radius: 1rem;
@@ -108,13 +114,25 @@
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
+  cursor: pointer;
 }
+.link-text {
+  border-bottom: 1px solid #000;  /* línea solo bajo texto */
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+
 @media (min-width: 600px) {
-  
+  .subtitle {
+  display: block;
+  color: #666565;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+}
   .projects-desktop h3 {
     font-size: 1.4rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     color: #000000;
 }
   .project-card h4 {
