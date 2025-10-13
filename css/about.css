@@ -54,6 +54,9 @@
     align-items: center;
     gap: 0.5rem;
   }
+  .about {
+    text-align: left;
+  }
   .about h2 {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -83,7 +86,6 @@
   display: none;
 }
 
-/* === DESKTOP (≥600px) === */
 @media (min-width: 600px) {
   .mobile-text {
     display: none;
@@ -104,12 +106,14 @@
     margin-bottom: 3rem;
     border-bottom: 1px solid grey;
   }
-
+  .desktop-width {
+    max-width: 708px;
+    position: left;
+  }
   .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 4rem;
   }
 
   .nav-list,

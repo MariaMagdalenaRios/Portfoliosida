@@ -35,6 +35,9 @@
   .nav-toggle {
     display: none;
   }
+  .logo{
+    text-align: left;
+  }
 }
 
 body {

@@ -9,7 +9,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 4rem;
   }
   .nav-list, .social-links {
     display: flex;
@@ -95,11 +94,6 @@
   .tech-icons.desktop-only img {
     width: 80px;
     height: 80px;
-    transition: transform 0.2s ease;
-  }
-
-  .tech-icons.desktop-only img:hover {
-    transform: scale(1.1);
   }
 
   /* Section spacing on desktop */

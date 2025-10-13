@@ -27,7 +27,6 @@
   font-size: 1.2rem;
   word-break: break-word; /* prevent email/phone from overflowing */
 }
-
 .contact a {
   text-decoration: none;
   color: inherit; /* keeps link color same as text */
@@ -41,21 +40,16 @@
   color: transparent; /* fallback */
   font-weight: bold;
 }
-/* === MOBILE FIRST === */
 .mobile-only {
   display: block;
 }
-
 .desktop-only {
   display: none;
 }
-
-/* === DESKTOP (≥600px) === */
 @media (min-width: 600px) {
   .mobile-only {
     display: none;
   }
-
   .desktop-only {
     display: block;
   }
@@ -66,9 +60,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 4rem;
   }
-
   .nav-list, .social-links {
     display: flex;
     align-items: center;
@@ -77,13 +69,11 @@
     margin: 0;
     padding: 0;
   }
-
   .nav-list a {
     text-decoration: none;
     color: rgb(153, 150, 150);
     font-weight: 500;
   }
-
   .social-links img {
     width: 30px;
     height: 30px;

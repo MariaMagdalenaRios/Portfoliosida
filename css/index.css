@@ -99,11 +99,7 @@ display: none;
   padding: 3px; /* for ring effect */
 }
 @media (min-width: 600px) {
-  .hero {
-  display: flex;
-  justify-content: left;  /* center block horizontally */
-  padding: 5rem;
-}
+  
   .hero-content {
     flex-direction: row;        /* put text + image side by side */
     align-items: center;        /* vertically center */
