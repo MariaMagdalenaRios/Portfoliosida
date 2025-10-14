@@ -1,10 +1,8 @@
 .desktop-only {
-display: none;
-}
-.nav-list, .social-links {
-  list-style: none; /* remove bullets */
+  display: none;
 }
 .social-links {
+  list-style: none;
   display: flex;
   gap: 5rem;
   justify-content: center; /* center icons in a row under menu */
@@ -16,6 +14,7 @@ display: none;
   filter: brightness(0);   /* makes icons black */
 }
 .nav-list {
+  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,18 +42,24 @@ display: none;
     flex-direction:row;
     justify-content: space-between;
   }
-  .nav-list, .social-links {
+  .nav-list {
     display: flex;
     flex-direction: row;
-    gap: 3rem;
     list-style: none;
     margin-left: 3rem;
-    padding: 0rem;  
+    padding: 0rem;
   }
   .nav-list a {
     text-decoration: none;
     color: rgb(153, 150, 150);
     font-weight: 500;
+    margin-left: 1rem;
+  }
+  .social-links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-left: 1rem;
     padding: 0rem;
   }
   .social-links img {
@@ -77,9 +82,6 @@ display: none;
   align-items: flex-start;  /* keep everything aligned left */
   gap: 1.5rem;
 }
-.hero-title {
-  font-size: 5rem;
-}
 .hero-title span {
   display: block;
   font-size: 1.2rem;
@@ -99,7 +101,6 @@ display: none;
   padding: 3px; /* for ring effect */
 }
 @media (min-width: 600px) {
-  
   .hero-content {
     flex-direction: row;        /* put text + image side by side */
     align-items: center;        /* vertically center */
@@ -117,4 +118,14 @@ display: none;
   padding: 3px; /* for ring effect */
 }
 }
-
+@media (prefers-color-scheme: dark) {
+  .nav-list a {
+    color: white;
+  }
+  .social-links img {
+    filter: brightness(100);   /* makes icons white */
+  }
+  .black-icon {
+    filter: brightness(0) invert(1);  /* makes icons white */
+  }
+}

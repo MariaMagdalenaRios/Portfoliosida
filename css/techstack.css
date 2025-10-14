@@ -29,12 +29,6 @@
     filter: brightness(0) saturate(0) invert(60%);
   }
 }
-.tech-stack {
-  padding-left: 0.5rem;
-  padding-right: 2rem;
-  min-height: 0vh;
-  
-}
 .tech-icons.mobile-only {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -55,7 +49,7 @@
   color: #666565;
 }
 .desktop-only {
-  display: none; /* hide desktop content on mobile */
+  display: none;
 }
 .desktop-text {
   display: none;
@@ -80,8 +74,6 @@
     font-size: 14px;
     color: #666565;
   }
-
-  /* Grid for desktop icons (2 rows × 6 icons) */
   .tech-icons.desktop-only {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -90,17 +82,13 @@
     align-items: center;
     margin-top: 6rem;
   }
-
   .tech-icons.desktop-only img {
     width: 80px;
     height: 80px;
   }
-
-  /* Section spacing on desktop */
-  .tech-stack {
-    margin-bottom: 5rem;
+}
+@media (prefers-color-scheme: dark) {
+  .black-icon {
+    filter: brightness(0) invert(1);  /* makes icons white */
   }
 }
-
-
-

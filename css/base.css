@@ -92,3 +92,31 @@ body {
     padding-top: 10rem;
   }
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #080808;         /* darker background */
+    --color-secondary: #b3b3b3;  /* lighter gray text */
+    --color-white: #ffffff;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-white);
+  }
+
+  .footer {
+    color: var(--color-secondary);
+  }
+
+  /* optional: tweak gradient colors for dark mode */
+  .footer .love,
+  .footer .coffee,
+  .footer .name {
+    background: linear-gradient(90deg, #bb86fc, #ff79c6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .nav-toggle {
+    color: var(--color-white);  /* make the hamburger icon white */
+  }
+}

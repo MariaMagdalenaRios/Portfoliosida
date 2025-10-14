@@ -138,3 +138,11 @@
     filter: brightness(0) saturate(0) invert(60%);
   }
 }
+@media (prefers-color-scheme: dark) {
+  .mobile-only .experience-left .experience-row p img {
+  filter: brightness(100); /* esto hace la imagen blanca */
+}
+  .mobile-only .experience-left  p img {
+  filter: brightness(100); /* esto hace la imagen blanca */
+}
+}

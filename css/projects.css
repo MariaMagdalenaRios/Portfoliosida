@@ -47,7 +47,7 @@
   max-width: 600px;
   margin: 0 auto;
 }
-.projects-mobile h3 {
+.project-title {
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
@@ -128,7 +128,7 @@
   font-size: 1rem;
   margin-bottom: 3rem;
 }
-  .projects-desktop h3 {
+  .project-title {
     font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -156,4 +156,30 @@
     margin: 0 auto;
     padding: 4rem 2rem;
   }
+}
+@media (prefers-color-scheme: dark) {
+  .project-title {
+    color: #ffffff;
+  }
+  .project-item {
+    background: #1e1e1e;
+  }
+  .project-item h3 {
+    color: #ffffff;
+  }
+  .project-item p {
+    color: #cccccc;
+  }
+  .project-card {
+    background: #1e1e1e;
+  }
+  .project-card h4 {
+    color: #ffffff;
+  }
+  .project-card p {
+    color: #cccccc;
+  }
+  .link-text {
+  border-bottom: 1px solid #ffffff;
+}
 }
