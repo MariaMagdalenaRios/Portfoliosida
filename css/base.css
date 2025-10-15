@@ -1,11 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 :root {
   --color-bg: #f9f9f9;
-  --color-primary: #060606;
-  --color-secondary: #000307;
+  --color-secondary: #656566;
   --color-white: #ffffff;
-  --color-black: #111827;
-
-  --font-main: Poppins bold, sans-serif;
+  --font-main: "Poppins", sans-serif;
 }
 
 * {
@@ -14,21 +13,105 @@
   box-sizing: border-box;
 }
 
+.logo {
+  height: 40px;
+  width: auto;
+}
+.nav-list {
+  font-size: 14px;
+}
+.nav-toggle {
+  position: absolute;   
+  top: 1rem;            
+  right: 1rem;          
+  background: none;     
+  border: none;
+  font-size: 1.5rem;      
+  cursor: pointer;
+}
+
+
+@media screen and (min-width: 600px) {
+  .nav-toggle {
+    display: none;
+  }
+}
 body {
   font-family: var(--font-main);
+  font-weight: 400;       /* regular */
+  font-size: 16px;
+  line-height: 1.5;
   background: var(--color-bg);
   color: var(--color-black);
   max-width: 600px;
   margin: 0 auto;
   padding: 1rem;
 }
-
-h1, h2 {
-  color: var(--color-primary);
-  margin-bottom: 0.5rem;
+@media screen and (min-width: 600px) {
+  body {
+    max-width: 1280px; 
+    margin: 20 auto;    
+    padding: 2rem 4rem; 
+  }
+}
+.footer .love,
+.footer .coffee {
+  color: var(--color-primary); 
+  background: linear-gradient(90deg, #7700ff, #ee09ee);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; 
+  display: inline-block;
+  font-family: var(--font-main);
+  font-weight: 500;
+}
+.footer {
+  text-align: center;
+  font-size: 0.6rem;
+  color: var(--color-secondary);
+  margin-top: 5rem;
 }
 
-p {
-  color: var(--color-secondary);
-  line-height: 1.5;
+@media screen and (min-width: 600px) {
+  .footer .name {
+    background: linear-gradient(90deg, #7700ff, #ee09ee);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+  }
+  .footer {
+    display: block;
+    padding-top: 10rem;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #080808;        
+    --color-secondary: #b3b3b3;  
+    --color-white: #ffffff;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-white);
+  }
+
+  .footer {
+    color: var(--color-secondary);
+  }
+  .footer .love,
+  .footer .coffee,
+  .footer .name {
+    background: linear-gradient(90deg, #bb86fc, #ff79c6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .nav-toggle {
+    color: var(--color-white); 
+  }
 }
