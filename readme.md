@@ -10,7 +10,7 @@ Despite these challenges, this project was really helpful since I improved my un
 2. Du svarar på dessa frågor (max 1000 ord):
 Vad är HTML och dess roll inom frontend? Vad menas med semantiskt HTML?
 
-HTML står för HyperText Markup Language. Det är grunden 1 alla webbsidor och det används för att strukturera innehållet.
+HTML står för HyperText Markup Language. Det är grunden i alla webbsidor och det används för att strukturera innehållet.
 Semantisk HTML betyder att man använder rätt taggar för rätt innehåll. Det gör koden lättare att förstå.
 
 Vad är CSS och dess roll inom frontend?
@@ -21,13 +21,24 @@ Vi använder det för att utveckla snygga, moderna och responsiva webbsidor. Fö
 Vad menas med responsiv design sant med vilka metoder man kan utveckla responsiva sidor?
 
 Responsiv design betyder att en webbplats anpassar sig automatiskt till olika skärmstorlekar, till exempel mobil, tablet och dator.
+Några metoder för att utveckla responsiva sidor:
+Mobile first
+Du börjar designa för mobil först (den minsta skärmen), och sedan anpassar du layouten för större skärmar med @media queries.
+CSS Flexbox
+Flexbox används för att skapa flexibla och centrerade layouter som automatiskt anpassar sig till olika skärmar.
+CSS Grid
+Grid gör det enkelt att skapa avancerade layouter som justeras efter skärmstorlek.
+Procent, em och rem istället för px
+Använd relativa måttenheter för att text och element ska skalas naturligt.
+Responsiva bilder
+Använd max-width: 100%; så att bilder inte blir större än sin container.
 
 Beskriv några konkreta tekniker enligt WCAG som kan förbättra en webbplats tillgänglighet.
 
 1. Alternativ text (alt-text)
 Alla bilder ska ha en beskrivande alt-text, så att personer med skärmläsare förstår bildens innehåll.
 2. Tangentbordsnavigering
-Allt innehåll ska gå utan mus, med bara tangentbordet.
+Allt innehåll ska gå att navigera utan mus, med bara tangentbordet.
 3. Färgkontrast
 Text och bakgrund ska ha tillräcklig kontrast, så att personer med nedsatt syn kan läsa tydligt.
 Exempel: mörk text på ljus bakgrund.
