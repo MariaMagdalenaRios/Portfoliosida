@@ -24,16 +24,16 @@
 .nav-list a {
   text-decoration: none; /* removes underline */
   color: black;          /* makes text black */
-  font-weight: 700;      /* optional, for better readability */
+  font-weight: 700;   
 }
 .footer {
   display: none;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .desktop-only {
     display: flex;
-}
+  }
   .mobile-only{
     display: none;
   }
@@ -73,12 +73,12 @@
 }
 .hero {
   display: flex;
-  justify-content: left;  /* center block horizontally */
+  justify-content: left;  
   padding: 2rem;
 }
 .hero-content {
   display: flex;
-  flex-direction: column;   /* stack text and image */
+  flex-direction: column;  
   align-items: flex-start;  /* keep everything aligned left */
   gap: 1.5rem;
 }
@@ -91,7 +91,7 @@
   background-clip: text;
   -webkit-background-clip: text;  /* for Safari */
   -webkit-text-fill-color: transparent;
-  color: transparent; /* fallback */
+  color: transparent; 
   font-weight: 700;
 }
 .hero-image {
@@ -100,12 +100,12 @@
   border-radius: 50%;
   padding: 3px; /* for ring effect */
 }
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .hero-content {
-    flex-direction: row;        /* put text + image side by side */
-    align-items: center;        /* vertically center */
+    flex-direction: row;        
+    align-items: center;        
     text-align: left;
-    gap: 20rem;                  /* space between text and image */
+    gap: 20rem;                 
   }
   .hero-title span {
   display: block;

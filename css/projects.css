@@ -7,7 +7,7 @@
 .desktop-only {
   display: none;
 }
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .mobile-only {
     display: none;
   }
@@ -104,10 +104,10 @@
   text-align: left;
 }
 .project-card img.project-image {
-  display: block;     /* removes inline gap */
-  width: 100%;        /* fill the entire card width */
-  height: auto;       /* keep aspect ratio */
-  border-radius: 0;   /* optional, ensure clean edges */
+  display: block;     
+  width: 100%;        
+  height: auto;       
+  border-radius: 0;  
 }
 .project-card .links {
   display: flex;
@@ -116,12 +116,12 @@
   cursor: pointer;
 }
 .link-text {
-  border-bottom: 1px solid #000;  /* línea solo bajo texto */
+  border-bottom: 1px solid #000;  
   padding-bottom: 2px;
   cursor: pointer;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .subtitle {
   display: block;
   color: #666565;

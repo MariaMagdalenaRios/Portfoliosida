@@ -7,35 +7,35 @@
 .contact {
   display: flex;
   flex-direction: column;
-  align-items: center;      /* horizontally center */
+  align-items: center;     
   text-align: center;
   padding: 2rem 1rem;
-  gap: 1rem;                 /* space between elements */
+  gap: 1rem;                
 }
 
 .contact h2 {
   font-size: 1.5rem;
-  color: var(--color-primary, #111); /* use your variable or fallback */
+  color: var(--color-primary, #111); 
 }
 
 .contact .mail,
 .contact .number {
   font-weight: bold;
-  color: var(--color-secondary, #333); /* fallback color */
+  color: var(--color-secondary, #333); 
   font-size: 1.2rem;
-  word-break: break-word; /* prevent email/phone from overflowing */
+  word-break: break-word; 
 }
 .contact a {
   text-decoration: none;
-  color: inherit; /* keeps link color same as text */
+  color: inherit; 
 }
 .mail,
 .number {
-  background: linear-gradient(90deg, #663ef8, #b304e9);  /* el degradado */
+  background: linear-gradient(90deg, #663ef8, #b304e9); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: transparent; /* fallback */
+  color: transparent; 
   font-weight: bold;
 }
 .mobile-only {
@@ -44,7 +44,7 @@
 .desktop-only {
   display: none;
 }
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .mobile-only {
     display: none;
   }

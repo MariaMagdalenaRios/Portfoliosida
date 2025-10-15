@@ -38,11 +38,10 @@
   filter: brightness(0); /* esto hace la imagen negra */
 }
 .mobile-only .experience-left  p img {
-  filter: brightness(0); /* esto hace la imagen negra */
+  filter: brightness(0); 
 }
 
-@media (min-width: 600px){
-
+@media screen and (min-width: 600px) {
   .desktop-only .experience-right,
   .desktop-only .experience-right,
   .desktop-only .education-right,
@@ -86,7 +85,7 @@
   display: none;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .mobile-text {
     display: none;
   }
@@ -140,9 +139,9 @@
 }
 @media (prefers-color-scheme: dark) {
   .mobile-only .experience-left .experience-row p img {
-  filter: brightness(100); /* esto hace la imagen blanca */
+  filter: brightness(100); 
 }
   .mobile-only .experience-left  p img {
-  filter: brightness(100); /* esto hace la imagen blanca */
+  filter: brightness(100); 
 }
 }

@@ -21,22 +21,21 @@
   font-size: 14px;
 }
 .nav-toggle {
-  position: absolute;   /* position relative to the page */
-  top: 1rem;            /* distance from top */
-  right: 1rem;          /* distance from right */
-  background: none;     /* remove default button style */
+  position: absolute;   
+  top: 1rem;            
+  right: 1rem;          
+  background: none;     
   border: none;
-  font-size: 1.5rem;      /* make ☰ bigger */
+  font-size: 1.5rem;      
   cursor: pointer;
 }
 
 
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .nav-toggle {
     display: none;
   }
 }
-
 body {
   font-family: var(--font-main);
   font-weight: 400;       /* regular */
@@ -48,22 +47,21 @@ body {
   margin: 0 auto;
   padding: 1rem;
 }
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   body {
-    max-width: 1280px; /* or 100%, if you want full width */
-    margin: 20 auto;    /* keep it centered but wider */
-    padding: 2rem 4rem; /* add horizontal breathing room */
+    max-width: 1280px; 
+    margin: 20 auto;    
+    padding: 2rem 4rem; 
   }
 }
-/* Footer gradient styling (site-wide). Applies to .coffee span whether nested or sibling of .love */
 .footer .love,
 .footer .coffee {
-  color: var(--color-primary); /* fallback for non-supporting browsers */
+  color: var(--color-primary); 
   background: linear-gradient(90deg, #7700ff, #ee09ee);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent; /* ensure gradient fills the glyphs */
+  color: transparent; 
   display: inline-block;
   font-family: var(--font-main);
   font-weight: 500;
@@ -75,8 +73,7 @@ body {
   margin-top: 5rem;
 }
 
-/* Desktop-only: give the footer .name the same gradient treatment as .coffee */
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .footer .name {
     background: linear-gradient(90deg, #7700ff, #ee09ee);
     background-clip: text;
@@ -94,8 +91,8 @@ body {
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-bg: #080808;         /* darker background */
-    --color-secondary: #b3b3b3;  /* lighter gray text */
+    --color-bg: #080808;        
+    --color-secondary: #b3b3b3;  
     --color-white: #ffffff;
   }
 
@@ -107,8 +104,6 @@ body {
   .footer {
     color: var(--color-secondary);
   }
-
-  /* optional: tweak gradient colors for dark mode */
   .footer .love,
   .footer .coffee,
   .footer .name {
@@ -117,6 +112,6 @@ body {
     -webkit-text-fill-color: transparent;
   }
   .nav-toggle {
-    color: var(--color-white);  /* make the hamburger icon white */
+    color: var(--color-white); 
   }
 }
