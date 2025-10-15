@@ -53,4 +53,4 @@ Alla formulärfält ska ha etiketter (label) som beskriver vad användaren ska s
 
 Redogör för några av de viktigaste UX/UI-principerna inom frontend?
 
-De viktigaste UX/UI-principerna inom frontend handlar om att skapa en positiv användarupplevelse. Genom att prioritera responsiv design, enkel och intuitiv navigation, snabba laddningstider, tillgänglighet och konsekvent design, bygger man webbplatser som känns både användarvänliga och professionella.
+De viktigaste UX/UI-principerna inom frontend handlar om att skapa en positiv användarupplevelse. Genom att prioritera responsiv design, enkel och intuitiv navigation, snabba laddningstider, tillgänglighet och konsekvent design, bygger man webbplatser som känns både användarvänliga och professionella. 
